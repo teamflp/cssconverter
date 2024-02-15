@@ -1,0 +1,17 @@
+{
+    "name": "paterne/cssconverter",
+    "description": "Convertisseur d'unités CSS",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Paterne\\Cssconverter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "teamflp",
+            "email": "teamflp@yahoo.it"
+        }
+    ],
+    "require": {}
+}
