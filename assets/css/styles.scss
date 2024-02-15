@@ -1,0 +1,129 @@
+// Variables globales
+$primary-color: #3498db;
+$secondary-color: #ccc; // Couleur secondaire pour les bordures
+$highlight-color: #eee; // Couleur de surbrillance pour l'animation
+$transition-color: #ddd; // Couleur de transition pour l'animation
+$font-stack: 'Helvetica Neue', sans-serif;
+$base-font-size: 16px;
+$padding: 10px;
+$border-radius: 5px;
+
+// Mixin pour border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Styles de base
+html {
+  font-size: $base-font-size;
+}
+
+h1 {
+  font-size: 2rem; // Exemple de taille par défaut
+}
+
+// Styles du container principal
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  // Styles communs pour form et result containers
+  .form-container, .result-container {
+    padding: 15px;
+    border: 4px solid $secondary-color;
+  }
+}
+
+// Animation des bordures
+@keyframes borderAnimation {
+  0%, 75% { border-color: $secondary-color; }
+  25%, 50% { border-color: $highlight-color; }
+  100% { border-color: $transition-color; }
+}
+
+.animated-border {
+  position: relative;
+  animation: borderAnimation 4s linear infinite;
+  border: 4px solid transparent; // Utilisez border transparent pour permettre de voir l'arrière-plan
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px; // La taille de la bordure
+    left: -2px; // La taille de la bordure
+    right: -2px; // La taille de la bordure
+    bottom: -2px; // La taille de la bordure
+    z-index: -1;
+    background: inherit;
+    @include border-radius(inherit);
+  }
+}
+
+// Styles pour les éléments <details>
+details {
+  background-color: #f9f9f9;
+  border: 1px solid lighten($primary-color, 20%);
+  @include border-radius($border-radius);
+  padding: $padding;
+  margin-bottom: $padding;
+  position: relative;
+
+  summary {
+    font-weight: bold;
+    color: darken($primary-color, 10%);
+    cursor: pointer;
+    list-style: none; // Supprime le triangle par défaut
+
+    &::before {
+      content: "+"; // Icône pour l'état fermé
+      color: $primary-color;
+      display: inline-block;
+      width: 20px;
+      margin-right: $padding / 2;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &[open] summary::before {
+    content: "-"; // Change l'icône pour l'état ouvert
+  }
+
+  p {
+    font-family: $font-stack;
+    line-height: 1.6;
+    margin-top: $padding / 2;
+
+    strong {
+      color: $primary-color;
+    }
+  }
+}
+
+// Media queries pour responsive
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; // Taille de police ajustée pour les écrans plus petits
+  }
+
+  .container-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "result";
+  }
+
+  .form-container { grid-area: form; }
+  .result-container {
+    grid-area: result;
+    border: 1px solid $secondary-color;
+
+    h3 { font-size: 1.5rem; }
+  }
+}
