@@ -24,15 +24,23 @@
 
 <div class="container mt-5">
     <h1 class="text-center h1">Convertisseur d'unités CSS</h1>
-    <small class="text-center d-block mb-3">px, em, rem et %</small>
+    <div class="">
+        <small class="text-center d-block mb-3">px, em, rem et %</small>
+        <div class="d-flex justify-content-center">
+            <a class="w3-text-brown" href="https://gnpinformatique.fr/cssconverter/cssconverter.pdf" download>
+                <i class="fas fa-file-download"></i> Télcharger le support PDF
+            </a>
+        </div>
+    </div>
     <div class="container-grid">
-        <div class="form-container animated-border">
+        <div class="form-container animated-border" id="block1">
             <div>
                 <details>
                     <summary>À propos de cet outil</summary>
                     <p>Vous pouvez utiliser cet outil pour convertir des valeurs de taille de police entre les unités <strong>px</strong>, <strong>em</strong>, <strong>rem</strong> et <strong>%</strong>.</p>
                     <p>Entrez une valeur, sélectionnez les unités de départ et d'arrivée, puis cliquez sur "Convertir".</p>
                     <p>La taille de police de l'élément racine ou de base est de <strong>16px</strong> par défaut. Vous pouvez la modifier si nécessaire.</p>
+                    <p>Une fois la conversion effectuée, vous verrez le résultat, la méthode de conversion et une description détaillée.</p>
                 </details>
             </div>
             <div class="w3-card-4">
@@ -65,7 +73,7 @@
                         <span class="invalid-feedback mt-2">Veuillez sélectionner une unité.</span>
                     </p>
                     <p class="mb-5">
-                        <label for="baseFontSizeInput">Taille de police de base (16px)</label>
+                        <label for="baseFontSizeInput"><small>(16px) est la taille de police de base sur les navigateurs. Elle peut être personnalisée.</small> </label>
                         <input type="number" class="w3-input w3-border w3-sand w3-round" id="baseFontSizeInput" name="base_font_size" placeholder="Taille de police de base (px)" step="0.01" value="16">
                         <span class="invalid-feedback mt-2">Veuillez entrer la taille de base de la police.</span>
                     </p>

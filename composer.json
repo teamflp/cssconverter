@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Paterne\\Cssconverter\\": "src/"
+            "App\\Cssconverter\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +13,7 @@
             "email": "teamflp@yahoo.it"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-pdo": "*"
+    }
 }
