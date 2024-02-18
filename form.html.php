@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="container-grid">
-        <div class="form-container animated-border" id="block1">
+        <div class="form-container animated-border">
             <div>
                 <details>
                     <summary>À propos de cet outil</summary>

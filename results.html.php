@@ -1,5 +1,5 @@
-            <canvas id="lineCanvas" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
-            <div class="result-container animated-border" id="block2">
+
+            <div class="result-container animated-border">
 
                 <?php if (isset($result) && $result !== null): ?>
                     <script>
@@ -56,46 +56,6 @@
                 });
             }, false);
         })();
-
-        // Call the function to draw the line when the window resizes and on initial load
-        /*window.onload = drawLine;
-        window.onresize = drawLine;
-
-        function drawLine() {
-            var canvas = document.getElementById('lineCanvas');
-            var ctx = canvas.getContext('2d');
-
-            // Set the canvas width and height to the window size
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            // Get the positions of the blocks
-            var block1 = document.getElementById('block1').getBoundingClientRect();
-            var block2 = document.getElementById('block2').getBoundingClientRect();
-
-            // Calculate the start and end positions of the line
-            var startX = block1.left+ block1.width / 1;
-            var startY = block1.bottom;
-            var endX = block2.left + block2.width / 700;
-            var endY = block2.top;
-
-            // Clear the canvas before drawing
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw the line
-            ctx.beginPath();
-            ctx.moveTo(startX, startY);
-            ctx.lineTo(endX, endY);
-            ctx.strokeStyle = '#ccc'; // Line color
-            ctx.lineWidth = 2; // Line width
-            ctx.stroke();
-
-            // Draw the text
-            ctx.font = '16px Arial';
-            ctx.fillStyle = '#ccc'; // Text color
-            ctx.fillText('CSS CONVERTER', startX + 40, startY - 10);
-
-        }*/
 
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
