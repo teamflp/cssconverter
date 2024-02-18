@@ -9,11 +9,11 @@
                         <h3 class="h3">Résultat :
                             <strong><?= htmlspecialchars($result) . $convertTo ?></strong>
                         </h3>
-                        <hr class="hr">
+                        <hr class="hr hr hr-blurry">
                         <h3 class="h3">Méthode de conversion :</h3>
                         Pour la conversion de <?= htmlspecialchars($value) . $convertFrom ?> en <?= htmlspecialchars($convertTo) ?>, la méthode utilisée est :
                         <p class="lead"><?= htmlspecialchars($conversionDescription) ?></p>
-                        <hr class="hr">
+                        <hr class="hr hr hr-blurry">
                         <h3 class="h3">
                             <small><i class='far fa-lightbulb text-warning'></i></small>
                             Formule de conversion :
@@ -26,6 +26,7 @@
         </div>
         <div class="text-center mt-5">
             <p>Une suggestion ?</p>
+            <hr class="hr hr hr-blurry">
             <p>
                 <a href="mailto:it.devwebm@gmail.com"><i class="fas fa-envelope-open"></i></a> |
                 <a href="https://www.linkedin.com/in/gnpinformatique/"> <i class="fab fa-linkedin"></i></a> |
