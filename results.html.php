@@ -27,7 +27,9 @@
         <div class="text-center mt-5">
             <p>Une suggestion ?</p>
             <p>
-                <a href="mailto:it.devwebm@gmail.com">it.devwebm@gmail.com</a> | <a href="https://www.linkedin.com/in/gnpinformatique/"> <i class="fab fa-linkedin"></i></a>
+                <a href="mailto:it.devwebm@gmail.com"><i class="fas fa-envelope-open"></i></a> |
+                <a href="https://www.linkedin.com/in/gnpinformatique/"> <i class="fab fa-linkedin"></i></a> |
+                <a href="https://github.com/teamflp"> <i class="fab fa-github"></i></a>
             </p>
         </div>
 
@@ -56,7 +58,7 @@
         })();
 
         // Call the function to draw the line when the window resizes and on initial load
-        window.onload = drawLine;
+        /*window.onload = drawLine;
         window.onresize = drawLine;
 
         function drawLine() {
@@ -93,7 +95,7 @@
             ctx.fillStyle = '#ccc'; // Text color
             ctx.fillText('CSS CONVERTER', startX + 40, startY - 10);
 
-        }
+        }*/
 
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
