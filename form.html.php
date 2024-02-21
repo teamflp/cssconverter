@@ -26,11 +26,11 @@
     <h1 class="text-center h1">Convertisseur d'unités CSS</h1>
     <div class="">
         <small class="text-center d-block mb-3">px, em, rem et %</small>
-        <div class="d-flex justify-content-center">
+       <!-- <div class="d-flex justify-content-center">
             <a class="w3-text-brown" href="https://gnpinformatique.fr/cssconverter/cssconverter.pdf" download>
                 <i class="fas fa-file-download"></i> Télcharger le support PDF
             </a>
-        </div>
+        </div>-->
     </div>
     <div class="container-grid">
         <div class="form-container animated-border">
