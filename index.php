@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $unitConverter = new UnitConverter();
 
         // Capture les valeurs soumises par le formulaire
-        $value = isset($_POST['value']) ? (float)$_POST['value'] : 0;
+        $value = $_POST['value'] ?? 0.0; // Valeur par défaut
         $convertFrom = $_POST['unit_from'] ?? '';
         $convertTo = $_POST['unit_to'] ?? '';
-        $rootFontSize = isset($_POST['base_font_size']) ? (float)$_POST['base_font_size'] : 16;
+        $rootFontSize = $_POST['base_font_size'] ?? 16.0;
 
         $unitConverter->setRootFontSize((float)$rootFontSize); // Définit la taille de police de base personnalisée
 
